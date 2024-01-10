@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prod
-  namespace: prod
+  name: test
+  namespace: dev
   labels:
-    app: prod
+    app: test
 spec:
   selector:
     matchLabels:
-      app: prod
+      app: test
   replicas: 1
   template:
     metadata:
       labels:
-        app: prod
+        app: test
     spec:
       # initContainers:
       # Init containers are exactly like regular containers, except:
       # - Init containers always run to completion.
       # - Each init container must complete successfully before the next one starts.
       containers:
-        - name: prod
+        - name: test
           image: alpine
           resources:
             requests:
@@ -31,6 +31,6 @@ spec:
               memory: 100Mi
           ports:
             - containerPort: 80
-              name: prod
+              name: test
           command: ["sleep", "90000"]
       restartPolicy: Always
