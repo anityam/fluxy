@@ -1,9 +1,3 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: not-important
-spec:
-  template:
-    spec:
-      containers:
-        - image: nginx
+- op: replace
+  path: /spec/template/spec/0/image
+  value: nginx
