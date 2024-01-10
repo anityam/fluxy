@@ -7,6 +7,5 @@ spec:
     spec:
       containers:
         - name: prod
-          image: busybox
           ports:
            - containerPort: 443 
