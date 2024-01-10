@@ -6,5 +6,5 @@ spec:
   template:
     spec:
       containers:
-          - ports:
-             - containerPort: 443 
+        - ports:
+          - containerPort: 443 
