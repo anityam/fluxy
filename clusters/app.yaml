@@ -5,5 +5,5 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: app
+    name: flux-system
   path: ./app
