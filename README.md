@@ -43,3 +43,6 @@ flux bootstrap github \
 ```
 
 Flux bootstrapping will install the flux component and sync them with this git repo so it can be managed in GitOps approach. To do the sync it will create a directory in the repo called [flux-system](./clusters/my-cluster/flux-system/) where a kustomization and GitRepository source are created for flux resources.
+
+
+### 
