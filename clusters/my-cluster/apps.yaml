@@ -12,3 +12,4 @@ spec:
     name: flux-system
   components:
     - ../../app/patch/
+    - ../../app/patch/replica
