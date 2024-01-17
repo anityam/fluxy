@@ -1,36 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
 metadata:
-  name: test
+  name: podinfo
   namespace: dev
-  labels:
-    app: test
 spec:
-  selector:
-    matchLabels:
-      app: test
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: test
+  interval: 5m
+  releaseName: podinfo
+  chart:
     spec:
-      # initContainers:
-      # Init containers are exactly like regular containers, except:
-      # - Init containers always run to completion.
-      # - Each init container must complete successfully before the next one starts.
-      containers:
-        - name: test
-          image: alpine
-          resources:
-            requests:
-              cpu: 100m
-              memory: 100Mi
-            limits:
-              cpu: 100m
-              memory: 100Mi
-          ports:
-            - containerPort: 80
-              name: test
-          command: ["sleep", "90000"]
-      restartPolicy: Always
+      chart: podinfo
+      sourceRef:
+        kind: HelmRepository
+        name: podinfo
