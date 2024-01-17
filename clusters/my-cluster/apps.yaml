@@ -12,3 +12,4 @@ spec:
     name: flux-system
   components:
     - ../components/image
+    - ../components/replica
