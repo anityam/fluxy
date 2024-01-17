@@ -13,3 +13,4 @@ spec:
   components:
     - ../components/image
     - ../components/replica
+    - ../components/annaotation
