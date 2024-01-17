@@ -3,4 +3,4 @@ kind: Component
 patches:
   - path: annotated.yaml
     target:
-      kind: Deployment
+      kind: Pod
